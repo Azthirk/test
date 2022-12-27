@@ -1,0 +1,106 @@
+Los mostrado por salida seria:
+25
+81
+2
+undefined
+
+alert(calculateBinomial(2, 3))
+alert(calculateBinomial(4, 5))
+
+En las primeras dos salidas, se van a mostrar el calculos binomiales de los pares 2, 3 (25) y 4, 5 (81)
+
+alert(numberOfCalls)
+
+La tercera salida, muestra el total de veces que se llamo a la funcion y se realizo el calculo.
+
+alert(typeof squareOfA);
+
+La última salida muestra undefined debido a que la variable "squareOfA" solo esta declarada dentro de la funcion calculateBinomial, typeof al no tener acceso a la variable no puede devolver su tipo, para que funcione correctamente se deberia declarar fuera de la función y agregarle un valor.
+
+
+2)
+- Get all strings containing the letter 'p'.
+
+var array = ["Apple", "Orange", "Banana", "Strawberry", "Grape", "Mango", "Melon", "Pineapple", "Peach", "Peach"];
+var yes = false;
+
+for(i in array){
+    for(k in array[i]){
+        if(array[i][k].toLowerCase() === "p") yes = true;
+    }
+
+    if(yes === true)console.log(array[i]);
+    yes = false;
+}
+
+- Obtain the ‘Grape’ string.
+
+var array = ["Apple", "Orange", "Banana", "Strawberry", "Grape", "Mango", "Melon", "Pineapple", "Peach", "Peach"];
+
+for(i in array){
+    if(array[i].toLowerCase() === "grape") console.log(array[i]);
+}
+
+3) 
+- Using the following function,print by console the message: “Etendo!!!”
+
+const mostrar = (param) => {
+    param();
+};
+
+const viewMessage = () => {
+    console.log("Etendo!!!");
+}
+
+mostrar(viewMessage);
+
+
+4) 
+- Write a JavaScript program to check whether a matrix is a diagonal matrix or not. In linear algebra, a diagonal matrix is a matrix in which the entries outside the main diagonal are all zero (the diagonal from the upper left to the lower right).
+
+var arrayBidimensional= new Array(3);
+
+for (var i = 0; i < 3; i++) {
+  arrayBidimensional[i] = new Array(3);
+}
+
+arrayBidimensional[0][0]=1;
+arrayBidimensional[0][1]=0;
+arrayBidimensional[0][2]=0;
+
+arrayBidimensional[1][0]=0;
+arrayBidimensional[1][1]=2;
+arrayBidimensional[1][2]=0;
+
+arrayBidimensional[2][0]=0;
+arrayBidimensional[2][1]=0;
+arrayBidimensional[2][2]=3;
+
+function matriz(array){
+    for (let i = 0; i < array.length; i++) {
+        for (let k = 0; k < array.length; k++) {
+            if(i === k){
+                if(i === array.length - 1 && k === array.length - 1){
+                    if(array[i][k - 1] !== undefined && array[i][k - 1] !== 0) return false;
+                    if(array[i - 1][k] !== undefined && array[i - 1][k] !== 0)return false;
+                }else if(i === 0 && k === 0){
+                    if(array[i][k + 1] !== undefined && array[i][k + 1] !== 0) return false
+                    if(array[i + 1][k] !== undefined && array[i + 1][k] !== 0)return false;
+                }else{
+                    if(array[i][k - 1] !== undefined && array[i][k - 1] !== 0) return false
+                    if(array[i][k + 1] !== undefined && array[i][k + 1] !== 0)return false;
+                    if(array[i - 1][k] !== undefined && array[i - 1][k] !== 0)return false;
+                    if(array[i + 1][k] !== undefined && array[i + 1][k] !== 0) return false;
+                }
+            }
+        }
+    }
+    return true;
+}
+
+console.log(matriz(arrayBidimensional));
+
+
+
+
+

@@ -1,0 +1,18 @@
+SELECT Name FROM AD_Window_ID WHERE AD_Window_ID = 100
+
+UDAPTE AD_Window_ID SET AD_Window_ID = 100
+WHERE Name = (Name + "--")
+SELECT * FROM AD_Window_ID
+
+3 - SELECT * FROM AD_Tab_ID WHERE AD_Window_ID = 100
+
+4 - SELECT Name FROM AD_Tab_ID JOIN AD_Field_ID Name
+ON AD_Window_ID = 100
+
+5 - SELECT AD_Tab_ID.name, count(AD_Tab_ID) FROM AD_Window_ID
+
+
+6 - SELECT AD_Window_ID FROM AD_Tab_ID ORDER BY AD_Field_ID DEC
+
+7 - SELECT * FROM AD_Window_ID WHERE count(AD_Tab_ID) > 5 
+

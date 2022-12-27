@@ -1,0 +1,3 @@
+1 - Hibernate es un Framework que agiliza la relación entre la aplicación y la base de datos. Se utiliza para generar sentencias de SQL.
+
+3- La complejidad del algoritmo es simple.
